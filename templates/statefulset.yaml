@@ -271,7 +271,7 @@ spec:
           {{- end }}
           {{- if .Values.flowProvider.postgres.enabled }}
             - name: NIFI_REGISTRY_FLOW_PROVIDER
-              value: postgres
+              value: database
             - name: NIFI_REGISTRY_DB_DIR
               value: ./ext/postgresql
             - name: NIFI_REGISTRY_DB_CLASS
