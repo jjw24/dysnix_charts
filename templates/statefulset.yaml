@@ -202,7 +202,6 @@ spec:
               . "${scripts_dir}/update_flow_provider.sh"
 
               # prop_replace 'nifi.registry.db.url' {{ .Values.flowProvider.postgres.url }}
-              prop_replace 'nifi.registry.db.url' jdbc:h2:./database/nifi-registry-primary
               prop_replace 'nifi.registry.db.driver.class' {{ .Values.flowProvider.postgres.driverClass }}
               prop_replace 'nifi.registry.db.username' {{ .Values.flowProvider.postgres.username }}
               prop_replace 'nifi.registry.db.password' {{ .Values.flowProvider.postgres.password }}
