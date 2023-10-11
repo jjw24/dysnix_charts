@@ -205,6 +205,10 @@ spec:
               prop_replace 'nifi.registry.db.driver.class' {{ .Values.flowProvider.postgres.driverClass }}
               prop_replace 'nifi.registry.db.username' {{ .Values.flowProvider.postgres.username }}
               prop_replace 'nifi.registry.db.password' {{ .Values.flowProvider.postgres.password }}
+
+              #remove debug
+              prop_replace 'nifi.registry.db.sql.debug' true
+
           {{- /* if .Values.flowProvider.postgres.enabled */}}{{- end }}
               
               # Log everything to the console, not to files
