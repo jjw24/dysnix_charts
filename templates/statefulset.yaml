@@ -203,6 +203,7 @@ spec:
 
               prop_replace 'nifi.registry.db.url' {{ .Values.flowProvider.postgres.url }}
               prop_replace 'nifi.registry.db.driver.class' {{ .Values.flowProvider.postgres.driverClass }}
+              prop_replace 'nifi.registry.db.driver.directory' {{ .Values.flowProvider.postgres.driverDirectory }}
               prop_replace 'nifi.registry.db.username' {{ .Values.flowProvider.postgres.username }}
               prop_replace 'nifi.registry.db.password' {{ .Values.flowProvider.postgres.password }}
 

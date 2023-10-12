@@ -171,6 +171,7 @@ flowProvider:
     driverURL: https://jdbc.postgresql.org/download/
     fileName: postgresql-42.2.6.jar
     driverClass: org.postgresql.Driver
+    driverDirectory: ./ext/postgresql
     url: jdbc:postgresql://localhost/nifireg
     username: nifireg
     password: nifireg
