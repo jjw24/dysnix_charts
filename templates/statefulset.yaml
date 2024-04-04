@@ -208,6 +208,11 @@ spec:
               prop_replace 'nifi.registry.db.password' "{{ .Values.flowProvider.postgres.password }}"
           {{- /* if .Values.flowProvider.postgres.enabled */}}{{- end }}
 
+          {{- if .Values.bundleProvider.s3.enabled }}
+              scripts_dir='/opt/nifi-registry/scripts'
+              . "${scripts_dir}/update_bundle_provider.sh"
+          {{- /* if .Values.bundleProvider.s3.enabled */}}{{- end }}
+
               # Log everything to the console, not to files
               xmlstarlet ed --inplace --delete "//configuration/logger/appender-ref[@ref='CONSOLE']" "${NIFI_REGISTRY_HOME}/conf/logback.xml"
               xmlstarlet ed --inplace --update "//configuration/logger/appender-ref[@ref='BOOTSTRAP_FILE']/@ref" -v CONSOLE "${NIFI_REGISTRY_HOME}/conf/logback.xml"
