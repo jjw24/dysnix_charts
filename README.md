@@ -1,3 +1,8 @@
+This branch is updated for deploying only the NiFi Registry via Rancher Fleet. Due to the size limitation of fleet deployment, documentation, test, other charts and CICD files have been removed.
+
+New fixes added: #1
+
+
 [![Lint and Test Charts](https://github.com/dysnix/charts/actions/workflows/lint-test.yaml/badge.svg)](https://github.com/dysnix/charts/actions/workflows/lint-test.yaml)
 
 # Dysnix Helm Charts
